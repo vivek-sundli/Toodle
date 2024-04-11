@@ -50,15 +50,4 @@ public class HomeController {
         return ticketService.getAllTicketsMongo();
     }
 
-    @GetMapping("/send")
-    public String sendMessage(@RequestBody String message){
-        messageSenderService.send(message);
-        return "Success sending : "+message;
-    }
-
-    @GetMapping("/receive")
-    public String receiveMessage() {
-        String message = receiverService.receiveMessage();
-        return message != null ? "Received message: " + message : "No message received.";
-    }
 }

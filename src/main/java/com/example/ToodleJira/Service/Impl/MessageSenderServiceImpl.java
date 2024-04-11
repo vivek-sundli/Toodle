@@ -5,9 +5,11 @@ import jakarta.jms.Destination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.Queue;
 
+@Service
 public class MessageSenderServiceImpl implements MessageSenderService {
 
     @Autowired
