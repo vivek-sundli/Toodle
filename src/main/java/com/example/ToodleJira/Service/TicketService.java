@@ -8,6 +8,8 @@ import java.util.Optional;
 
 public interface TicketService {
     public void saveticket(TicketDto ticketDto);
+    public void saveTicketMongo(TicketDto ticketDto);
     public Optional<Ticket> getTicketById(String Id);
     public List<Ticket> getAllTickets();
+    public List<Ticket> getAllTicketsMongo();
 }

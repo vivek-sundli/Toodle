@@ -26,8 +26,19 @@ public class HomeController {
         ticketService.saveticket(ticketDto);
         return "Success";
     }
+    @PostMapping("/save/ticket/mongo")
+    public String saveTicketMongo(@RequestBody TicketDto ticketDto){
+        ticketService.saveTicketMongo(ticketDto);
+        return "Success for Mongo!";
+    }
+
     @GetMapping("/get/ticket/all")
     public List<Ticket> getTickets(){
         return ticketService.getAllTickets();
+    }
+
+    @GetMapping("/get/ticket/all/mongo")
+    public List<Ticket> getTicketsMongo(){
+        return ticketService.getAllTicketsMongo();
     }
 }
