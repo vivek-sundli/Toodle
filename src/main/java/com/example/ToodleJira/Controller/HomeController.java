@@ -24,7 +24,7 @@ public class HomeController {
     @PostMapping("/save/ticket")
     public String saveTicket(@RequestBody TicketDto ticketDto){
         ticketService.saveticket(ticketDto);
-        return "Success in saving";
+        return "Success";
     }
     @GetMapping("/get/ticket/all")
     public List<Ticket> getTickets(){
