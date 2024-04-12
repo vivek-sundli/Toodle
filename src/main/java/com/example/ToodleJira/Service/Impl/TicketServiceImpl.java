@@ -55,4 +55,5 @@ public class TicketServiceImpl implements TicketService {
     public List<Ticket> getAllTicketsMongo() {
         return ticketMongoRepository.findAll().stream().toList();
     }
+
 }

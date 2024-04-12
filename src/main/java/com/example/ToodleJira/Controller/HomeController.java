@@ -2,6 +2,8 @@ package com.example.ToodleJira.Controller;
 
 import com.example.ToodleJira.Dto.TicketDto;
 import com.example.ToodleJira.Entity.Ticket;
+import com.example.ToodleJira.Service.MessageSenderService;
+import com.example.ToodleJira.Service.ReceiverService;
 import com.example.ToodleJira.Service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,12 @@ public class HomeController {
 
     @Autowired
     TicketService ticketService;
+
+    @Autowired
+    ReceiverService receiverService;
+
+    @Autowired
+    MessageSenderService messageSenderService;
 
     @GetMapping
     public String getCall(){
@@ -41,4 +49,5 @@ public class HomeController {
     public List<Ticket> getTicketsMongo(){
         return ticketService.getAllTicketsMongo();
     }
+
 }
